@@ -44,7 +44,7 @@ nav {
 .nav-links {
     display: flex; /* Display links horizontally */
     list-style: none; /* Remove bullet points */
-    margin-left: auto; /* Push links to far right */
+    padding-right: 70px; /* Push links to far right */
 }
 
 /* Each list item in nav (used for dropdown positioning) */
