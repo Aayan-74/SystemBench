@@ -27,211 +27,140 @@ body {
 
 /*  NAVIGATION BAR STYLING  */
 
-/* Nav bar styling that makes white fill on hover and creates a nav bar with 2 dropdown menus */
-nav {
-    background-color: #111; /* Dark background for the nav bar */
-    font-family: "Audiowide", sans-serif; /* Gaming-style font */
-    color: white; /* White text for contrast */
-    display: flex; /* Makes nav a flex container */
-    justify-content: space-between; /* Push logo left and links right */
-    align-items: center; /* Center items vertically */
-    padding: 0 40px; /* Space on the left and right */
-    height: 80px; /* Set a fixed height for nav bar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow below the navbar */
+body {
+  margin: 0;
+  font-family: 'Audiowide', sans-serif;
 }
 
-/* Styling the nav links container */
+/* NAVBAR CONTAINER */
+.nav-wrapper {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 40px;              /* space between logo + links */
+
+  width: auto;
+  background: #f4f4f4;
+  border-radius: 60px;
+  padding: 12px 35px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  color: #6b63ff;
+}
+
 .nav-links {
-    display: flex; /* Display links horizontally */
-    list-style: none; /* Remove bullet points */
-    padding-right: 70px; /* Push links to far right */
+  display: flex;
+  align-items: center;
+  gap: 18px;        /* smaller spacing */
+  list-style: none;
 }
 
-/* Each list item in nav (used for dropdown positioning) */
 .nav-links li {
-    position: relative; /* Needed for dropdown positioning */
+  position: relative;
+}
+.nav-links li {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-in {
+  background: linear-gradient(90deg,#6b63ff,#8b82ff);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 30px;
+  flex-shrink: 0;
 }
 
-/* Styling each link in the nav */
+.home-btn {
+  border: 1px solid #ddd;
+  padding: 8px 18px !important;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
 .nav-links a {
-    position: relative; /* Required for hover effects */
-    display: inline-block; /* Make links sit next to each other */
-    padding: 10px 20px; /* Space around link text */
-    color: white;
-    font-family: 'Audiowide', sans-serif;
-    text-transform: uppercase; /* Makes text all caps */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.4s ease; /* Smooth text color change */
-    z-index: 1; /* Ensure link is above hover effects */
+  text-decoration: none;
+  color: #444;
+  font-size: 13px;
+  padding: 6px 12px;   /* 🔥 smaller pills */
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
-/* White box fill effect under nav links on hover */
-.nav-links a::before {
-    content: ""; /* Required for pseudo element */
-    position: absolute;
-    inset: 0; /* Top, right, bottom, left = 0 */
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: white;
-    transform: scale(0); /* Initially hidden */
-    transition: transform 0.3s ease;
-    z-index: -1; /* Sits behind the text */
-}
-
-/* White underline animation on hover */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    bottom: 6px;
-    left: 20%;
-    width: 60%;
-    height: 2px;
-    background: white;
-    transform: scaleX(0); /* Hidden initially */
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-/* Changes text color when hovering */
 .nav-links a:hover {
-    color: black; /* Black text on white box */
+  background: #f3f3ff;
 }
 
-/* Triggers the white box fill on hover */
-.nav-links a:hover::before {
-    transform: scale(1); /* Scale to visible */
-}
-
-/* Triggers underline animation */
-.nav-links a:hover::after {
-    transform: scaleX(1); /* Expand underline */
-    transform-origin: left; /* Animate from left to right */
-}
-
-/* DROPDOWN MENU STYLING */
-
-/* Hides dropdowns by default */
+/* ANIMATED DROPDOWN */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Directly below parent link */
-    left: 0;
-    background: #111; /* Matches nav bar */
-    padding: 10px 0;
-    list-style: none;
-    z-index: 10; /* On top of page elements */
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  min-width: 160px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-/* Show dropdown when parent is hovered */
-.dropdown:hover .dropdown-menu {
-    display: block;
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* Styling for each link inside the dropdown */
 .dropdown-menu li a {
-    padding: 10px 20px;
-    display: block;
-    color: white;
-    transition: background 0.3s, color 0.3s; /* Smooth hover transitions */
+  display: block;
+  padding: 10px 20px;
+  transition: 0.25s;
 }
 
-/* Hover effect for dropdown items */
 .dropdown-menu li a:hover {
-    background: white;
-    color: black;
+  background: #f3f3ff;
+  transform: translateX(4px);
 }
 
-/* ========== LOGO STYLING ========== */
-
-.logo img {
-    height: 50px; /* Logo height */
-    width: auto; /* Maintain aspect ratio */
+.lang {
+  border: 1px solid #ddd;
+  border-radius: 30px;
 }
 
-/* REPEATED NAV-LINKS STYLING  */
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
+.sign-in {
+  background: linear-gradient(90deg,#6b63ff,#8b82ff);
+  color: white !important;
+  padding: 10px 25px !important;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(107,99,255,0.4);
 }
 
-.nav-links li {
-    position: relative;
+.home-btn {
+  border: 1px solid #ddd;
+  padding: 10px 20px !important;
+  border-radius: 30px;
 }
 
-.nav-links a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: background 0.3s ease;
-    border-radius: 5px;
+/* ARROW ROTATE */
+#benchmarksToggle span {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-.nav-links a:hover {
-    background-color: #222; /* Slightly lighter hover bg */
-}
-
-/*  DROPDOWN SCROLLBAR & STYLING  */
-
-/* all dropdown menu code was gotten from this youtube tutorial: https://www.youtube.com/watch?v=rgUp302f_lY&t=12s&ab_channel=DaniKrossing */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222; /* Slightly lighter than nav */
-    min-width: 180px;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Soft shadow */
-    z-index: 999; /* Tutorial used this high number for safety */
-    max-height: 300px; /* Makes dropdown scrollable */
-    overflow-y: auto; /* Scroll if items exceed 300px */
-    overflow-x: hidden;
-}
-
-/* Styling the vertical scrollbar inside dropdown */
-.dropdown-menu::-webkit-scrollbar {
-    width: 6px; /* Slim scrollbar */
-}
-
-/* Scrollbar thumb styling */
-.dropdown-menu::-webkit-scrollbar-thumb {
-    background-color: #444;
-    border-radius: 10px;
-}
-
-/* Display each dropdown item in block */
-.dropdown-menu li {
-    display: block;
-}
-
-/* Styling each dropdown link */
-.dropdown-menu a {
-    padding: 12px 20px;
-    font-size: 14px;
-    border-bottom: 1px solid #333; /* Divider between links */
-}
-
-/* Remove divider on the last item */
-.dropdown-menu a:last-child {
-    border-bottom: none;
-}
-
-/* Shows dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hover effect inside dropdown */
-.dropdown-menu a:hover {
-    background-color: #444;
-}
-
-/* ========== FOOTER STYLING ========== */
+.dropdown.open #benchmarksToggle span {
+  transform: rotate(180deg);
+}/* ========== FOOTER STYLING ========== */
 
 footer {
     font-family: "myFont", sans-serif; /* Matches rest of page */
