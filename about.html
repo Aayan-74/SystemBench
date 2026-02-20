@@ -63,79 +63,65 @@ nav{
     </style>
 </head>
 <body>
-    <nav>
+            <!-- Navbar -->
+        <nav>
   <div class="logo">
-            <h1>SystemBench</h1>
+            <h1> <a style="color: white;"" href="index.html">SystemBench</a></h1>
         </div>
         <ul class="nav-links">
             <li class="dropdown">
-                <a href="shop.html">Dashboard</a>
-                <ul class="dropdown-menu">
-                    <li><a href="laptop.html">Laptops</a></li>
-                    <li><a href="pcs.html">PCs</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
-                    <li><a href="accessories.html">Accessories</a></li>
-                </ul>
+                <a href="dashboard.html">Dashboard</a>
             </li>
             <li><a href="shop.html">Anti-virus</a></li>
             <li><a href="about.html">Benchmark</a></li>
             <li class="dropdown">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">REDEEM</a>
                 <ul class="dropdown-menu">
                     <li><a href="login.html">Login</a></li>
                     <li><a href="signup.html">Sign Up</a></li>
                 </ul>
             </li>
         </ul>
-    </nav>
-    <main>
-        <!-- Main Content -->
-  <div class="about-container">
+    </nav><section class="benchmark-page">
 
-    <h1>Welcome to Lotus Gaming</h1>
-    <p>
-      Lotus Gaming is your home for amazing gaming computers! We build and sell powerful PCs and laptops that are perfect for serious gamers and beginners alike.
-    </p>
-
-    <h2>⭐ Our Mission</h2>
-    <p>
-      We want to help every gamer play their best. Whether you’re just starting or already a pro, we believe everyone deserves fast, fun, and strong gaming gear.
-    </p>
-
-    <h2>🖥️ Why Choose Us?</h2>
-    <p>
-      🌟 Custom-made for gamers<br>
-      ⚡ Super fast computers<br>
-      🎮 Works great with games like Fortnite, Roblox, Minecraft, Call of Duty, and more!<br>
-      💸 Great prices that won’t break your wallet
-    </p>
-
-    <h2>🚀 What We Offer</h2>
-    <p>
-      - Gaming Laptops<br>
-      - Desktop PCs<br>
-      - Gaming Accessories (coming soon!)<br>
-      - Friendly customer support
-    </p>
-
-    <h2>🕹️ Customer Reviews</h2>
-    <div class="reviews">
-      <p><strong>“My Lotus Gaming laptop runs Roblox and Fortnite so fast. I love it!”</strong><br>— Jordan, Age 11</p>
-    </div>
-    <div class="reviews">
-      <p><strong>“This PC helped me win my first Call of Duty match. Super smooth!”</strong><br>— Emily, Age 13</p>
-    </div>
-    <div class="reviews">
-      <p><strong>“Best birthday gift ever. Thank you Lotus Gaming!”</strong><br>— Ahmed, Age 12</p>
+    <div class="benchmark-header">
+        <h1>System Benchmark</h1>
+        <p>Test your system performance across CPU, GPU, and Memory.</p>
+        <button class="run-btn" id="runBenchmarkBtn">RUN BENCHMARK</button>
+        <div id="benchmarkResults"></div>
     </div>
 
-    <h2>💬 Got Questions?</h2>
-    <p>
-      Want to learn more or need help choosing a computer? Visit our <a href="contact.html">Contact</a> page. We’re happy to help!
-    </p>
+    <div class="benchmark-results">
 
-  </div>
-    </main>
+        <div class="result-box">
+            <h2>CPU Score</h2>
+            <p class="score">8,420</p>
+            <p>Performance: Excellent</p>
+        </div>
+
+        <div class="result-box">
+            <h2>GPU Score</h2>
+            <p class="score">7,950</p>
+            <p>Performance: Very Good</p>
+        </div>
+
+        <div class="result-box">
+            <h2>Memory Score</h2>
+            <p class="score">6,880</p>
+            <p>Performance: Good</p>
+        </div>
+
+    </div>
+
+    <div class="system-info">
+        <h2>System Information</h2>
+        <p><strong>CPU:</strong> Intel i7-12700H</p>
+        <p><strong>GPU:</strong> RTX 3060</p>
+        <p><strong>RAM:</strong> 16GB DDR5</p>
+        <p><strong>Storage:</strong> 1TB SSD</p>
+    </div>
+
+</section>
     <footer>
         <div class="footer-content">
             <p>&copy; 2023 Lotus Gaming. All rights reserved.</p>
@@ -147,4 +133,7 @@ nav{
         </div>
     </footer>
 </body>
+<script>
+  
+</script>
 </html>

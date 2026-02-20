@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Main stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Product-specific stylesheet -->
+        <link rel="stylesheet" href="product.css">
+        <!-- Google Fonts: Audiowide -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+        <title>Shop</title>
+        <style>
+             * {
+      margin: 0;
+      padding: 0;
+    }
+            /* Use Audiowide font for navbar */
+            /* Button styling */
+    button {
+      font-family: "myFont", sans-serif;
+      width: 100%;
+      padding: 12px;
+      background-color: #111;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    /* Button hover effect */
+    button:hover {
+      background-color: #333;
+    }
+            nav {
+                font-family: "Audiowide", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+  <div class="logo">
+            <h1> <a style="color: white;"" href="index.html">SystemBench</a></h1>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li><a href="shop.html">Anti-virus</a></li>
+            <li><a href="about.html">Benchmark</a></li>
+            <li class="dropdown">
+                <a href="contact.html">REDEEM</a>
+                <ul class="dropdown-menu">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        <section class="dashboard">
+
+    <!-- Top Stats -->
+    <div class="stats-row">
+        <div class="stat-box">
+            <h3>0</h3>
+            <p>Available Points</p>
+        </div>
+        <div class="stat-box">
+            <h3>2</h3>
+            <p>Total Scans</p>
+        </div>
+        <div class="stat-box">
+            <h3>4</h3>
+            <p>Benchmarks Run</p>
+        </div>
+        <div class="stat-box">
+            <h3>5</h3>
+            <p>Threats Removed</p>
+        </div>
+    </div>
+
+    <!-- Main Action Cards -->
+    <div class="main-actions">
+        <div class="action-card">
+            <h2>ANTIVIRUS</h2>
+            <button>SCAN NOW</button>
+        </div>
+
+        <div class="action-card">
+            <h2>BENCHMARK</h2>
+            <button>RUN NOW</button>
+        </div>
+
+        <div class="action-card">
+            <h2>REWARDS</h2>
+            <button>REDEEM NOW</button>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+
+        <!-- Level -->
+        <div class="level-box">
+            <h2>Your Level</h2>
+            <p>Rookie</p>
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+
+            <p>300 / 500 XP to Level 2</p>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="activity-box">
+            <h2>Recent Activity</h2>
+
+            <div class="activity-item positive">
+                +75 XP - Quick Scan
+            </div>
+
+            <div class="activity-item positive">
+                +50 XP - Benchmark Completed
+            </div>
+
+            <div class="activity-item negative">
+                -300 XP - Reward Redeemed
+            </div>
+        </div>
+
+    </div>
+
+</section>
+    </body>
+</html>
+
