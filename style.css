@@ -20,7 +20,7 @@ body {
     font-size: 16px; /* Base font size for all text */
     line-height: 1.6; /* Improves spacing between lines for readability */
     letter-spacing: 2px; /* Adds space between letters */
-    background-color: #f4f4f4; /* Light background for clean look */
+    /*background-color: black;  Light background for clean look */
     color: #333; /* Dark text color for contrast */
     overflow-x: hidden; /* Prevents side scrolling on small screens */
 }
@@ -35,7 +35,7 @@ body {
 /* NAVBAR CONTAINER */
 .nav-wrapper {
   position: fixed;
-  top: 30px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -46,15 +46,21 @@ body {
   width: auto;
   background: #f4f4f4;
   border-radius: 60px;
-  padding: 12px 35px;
+  padding: 7px 55px;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
 .logo {
-  font-size: 26px;
-  color: #6b63ff;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {

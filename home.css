@@ -1,0 +1,87 @@
+/* HERO SECTION */
+
+.hero {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero-title {
+  font-size: 70px;
+  letter-spacing: 20px;
+  color: #3c3b8f;
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: #7d7cff;
+}
+
+.hero-buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.test-btn,
+.bench-btn {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 18px 35px;
+  border-radius: 40px;
+  font-family: 'Audiowide', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.test-btn:hover,
+.bench-btn:hover {
+  background: #ededff;
+}
+
+.upgrade-btn {
+  margin-top: 40px;
+  background: linear-gradient(90deg,#1b1535,#4b3b9b);
+  color: white;
+  padding: 18px 40px;
+  border-radius: 40px;
+  border: none;
+  font-family: 'Audiowide', sans-serif;
+  letter-spacing: 3px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-features {
+  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #7d7cff;
+}
+/* PAGE BACKGROUND IMAGE */
+* ===== NEW FUNDAMENTAL THEME ===== */
+
+body {
+  margin: 0;
+  font-family: 'Audiowide', sans-serif;
+  background: linear-gradient(-45deg, #0f0f1c, #1a1a2e, #141427, #0d0d17);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
