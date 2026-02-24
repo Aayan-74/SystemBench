@@ -77,13 +77,6 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.sign-in {
-  background: linear-gradient(90deg,#6b63ff,#8b82ff);
-  color: white !important;
-  padding: 8px 20px !important;
-  border-radius: 30px;
-  flex-shrink: 0;
-}
 
 .home-btn {
   border: 1px solid #ddd;
