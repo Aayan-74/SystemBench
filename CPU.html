@@ -64,25 +64,31 @@ nav{
 </head>
 <body>
             <!-- Navbar -->
-        <nav>
+       <nav class="nav-wrapper">
   <div class="logo">
-            <h1> <a style="color: white;"" href="index.html">SystemBench</a></h1>
-        </div>
-        <ul class="nav-links">
-            <li class="dropdown">
-                <a href="dashboard.html">Dashboard</a>
-            </li>
-            <li><a href="shop.html">Anti-virus</a></li>
-            <li><a href="about.html">Benchmark</a></li>
-            <li class="dropdown">
-                <a href="contact.html">REDEEM</a>
-                <ul class="dropdown-menu">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav><section class="benchmark-page">
+    <img src="sb-logo.png" alt="SystemBench Logo">
+  </div>
+
+  <ul class="nav-links">
+    <li class="dropdown" id="benchmarksDropdown">
+      <a href="#" id="benchmarksToggle">
+        Benchmarks <span>▾</span>
+      </a>
+
+      <ul style="list-style: none;" class="dropdown-menu">
+        <li><a href="#">CPU</a></li>
+        <li><a href="#">GPU</a></li>
+      </ul>
+    </li>
+
+    <li><a href="bolttleneck.html">Bottleneck</a></li>
+    <li><a href="#" class="lang">🌐 EN ▾</a></li>
+    <li><a href="login.html" class="sign-in">Sign In</a></li>
+    <li><a href="index.html" class="home-btn">HOME</a></li>
+    <li><a href="dashboard.html" class="home-btn">Dashboard</a></li>
+  </ul>
+</nav>
+<section class="benchmark-page">
 
     <div class="benchmark-header">
         <h1>System Benchmark</h1>
